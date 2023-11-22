@@ -15,7 +15,8 @@ body, html{
     min-height: 100vh;
     display: grid;
     grid-template-rows: 1fr auto;
-    background-color: var(--background-color);
+    background-image: url("../img/bg.webp");
+    background-size: cover;
 }
 
 header{
@@ -26,9 +27,8 @@ header{
     height: 90px;
     padding: 0 40px;
     justify-content: space-between;
-    background-image: url("../img/bg.jpg");
-    background-size: cover;
     color: var(--text-color);
+    background-color: var(--background-color);
 }
 
 footer {
