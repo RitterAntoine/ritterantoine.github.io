@@ -2,34 +2,85 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="description" content="Antoine Ritter's portfolio">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Antoine Ritter</title>
     <link rel="stylesheet" href="src/styles/style.css">
 </head>
 <body>
 <header>
-    <div class="name">
-        <div class="pfp">
-            <img src="src/img/pfp.png" alt="Antoine Ritter">
+    <div class="header-name">
+        <div class="header-pfp">
+            <img src="src/img/logo.webp" alt="Antoine Ritter">
         </div>
         Antoine Ritter
     </div>
-    <div class="navigation">
-        <a href="#">
-            Home
-        </a>
-        <a href="#">
-            About
-        </a>
-        <a href="#">
-            Projects
-        </a>
-        <a href="#">
-            Contact
-        </a>
+    <div class="header-navigation">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Projects</a>
+        <a href="#">Contact</a>
+        <label class="switch">
+            <input type="checkbox" id="themeToggle">
+            <span class="slider"></span>
+        </label>
     </div>
 </header>
+<div class="content">
+    <div class="content-title">
+        <h1>Hi, I'm Antoine Ritter</h1>
+        <h2>Futur IT engineer</h2>
+    </div>
+    <div class="content-separador"></div>
+    <div class="content-main">
+        <div class="content-main-1">
+            <p>
+                I'm a student at CESI engineering school in Nancy, France. I'm currently in my 3rd year of studies.
+                I'm going to graduate in 2026 with a master's degree in IT engineering. But I'm already looking for a doctoral thesis.
+            </p>
+        </div>
+        <div class="content-main-2">
+            <p>
+                I'm passionate about IT, and I'm always looking to learn more about it.
+                I'm also interested in web development and I'm currently learning React.
+            </p>
+        </div>
+        <div class="content-main-3">
+            <p>
+                I'm a very curious person and I'm always looking to learn new things.
+                I'm also a very motivated person and I'm always looking to improve myself.
+            </p>
+        </div>
+    </div>
+    <div class="content-separador"></div>
+    <div class="content-secondary">
+        <div class="content-secondary-1">
+            <h2>
+                My hobbies
+            </h2>
+            <p>
+                I really love the astrophysics and the space conquest. I really like to learn about the universe and the stars.
+            </p>
+        </div>
+    </div>
+
+</div>
+<footer>
+    <div class="social">
+        <div class="social__title">
+            <a href="https://github.com/RitterAntoine" class="footer__link" aria-label="link to my github">
+                <img src="src/img/github-logo.png" alt="">
+            </a>
+        </div>
+        <div class="social__title">
+            <a href="https://www.linkedin.com/in/antoine-ritter-cesi/" class="footer__link" aria-label="link to my linkedin">
+                <img src="src/img/linkedin-logo.png" alt="">
+            </a>
+        </div>
+    </div>
+    <div class="footer-separador"></div>
+    <p class="footer-copyright">Copyright @ 2023</p>
+</footer>
+<script src="src/scripts/theme.js"></script>
 </body>
 </html>
