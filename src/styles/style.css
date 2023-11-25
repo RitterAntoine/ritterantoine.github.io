@@ -5,11 +5,9 @@
     --secondary-color: #0C1A1A; /* Vert Cardin */
     --accent-color: #BFA181;
     --text-color: #581845;
-    --header-text-color: #581845;
-    --footer-text-color: #581845;
-    --background-color: #B4BAFF;
     --header-background-color: #FFEBD8;
     --footer-background-color: #FFEBD8;
+    --background-color: #B4BAFF;
     --border-color: #000000;
 }
 
@@ -23,7 +21,7 @@ body, html {
     position: relative;
 }
 
-header{
+header {
     display: flex;
     align-items: center;
     width: 100%;
@@ -36,11 +34,10 @@ header{
 }
 
 footer {
-    margin-top: 80px;
     background: var(--footer-background-color);
 }
 
-.header-name{
+.header-name {
     display: flex;
     align-items: center;
     font-family: var(--text-font);
@@ -48,14 +45,11 @@ footer {
     font-weight: bold;
 }
 
-.header-name img{
+.header-name img {
     width: 50px;
     height: 50px;
     border-radius: 15%;
     border: solid 2px var(--border-color);
-}
-
-.header-name .header-pfp {
     margin-right: 30px;
 }
 
@@ -72,28 +66,24 @@ footer {
     font-size: 20px;
 }
 
-/* The switch - the box around the slider */
+/* Switch Styles */
 .switch {
     display: block;
     --width-of-switch: 3.5em;
     --height-of-switch: 2em;
-    /* size of sliding icon -- sun and moon */
     --size-of-icon: 1.4em;
-    /* it is like a inline-padding of switch */
     --slider-offset: 0.3em;
     position: relative;
     width: var(--width-of-switch);
     height: var(--height-of-switch);
 }
 
-/* Hide default HTML checkbox */
 .switch input {
     opacity: 0;
     width: 0;
     height: 0;
 }
 
-/* The slider */
 .slider {
     position: absolute;
     cursor: pointer;
@@ -117,7 +107,6 @@ footer {
     top: 50%;
     transform: translateY(-50%);
     background: linear-gradient(40deg,#ff0080,#ff8c00 70%);
-;
     transition: .4s;
 }
 
@@ -128,14 +117,14 @@ input:checked + .slider {
 input:checked + .slider:before {
     left: calc(100% - (var(--size-of-icon,1.4em) + var(--slider-offset,0.3em)));
     background: #303136;
-    /* change the value of second inset in box-shadow to change the angle and direction of the moon  */
     box-shadow: inset -3px -2px 5px -2px #8983f7, inset -10px -4px 0 0 #a3dafb;
 }
 
+/* Content Styles */
 .content {
     background-color: var(--background-color);
-    margin: 20px 20px 20px 20px;
-    padding: 20px 20px 20px 20px;
+    margin: 100px;
+    padding: 20px;
     opacity: 0.7;
     display: block;
     text-align: center;
@@ -147,7 +136,7 @@ input:checked + .slider:before {
     opacity: .9;
 }
 
-.content-separador {
+.content-separator, .footer-separator {
     background-color: var(--text-color);
     height: 2px;
     max-width: 200px;
@@ -161,7 +150,7 @@ input:checked + .slider:before {
     margin-bottom: 20px;
 }
 
-.content-main {
+.content-main, .content-secondary {
     font-size: 20px;
     font-weight: 1000;
     color: var(--text-color);
@@ -169,15 +158,25 @@ input:checked + .slider:before {
     display: inline-flex;
 }
 
-.content-secondary {
-    font-size: 20px;
-    font-weight: 1000;
-    color: var(--text-color);
-    margin-bottom: 20px;
-    display: inline-flex;
+.content-main-1 {
+    width: 33%;
+    margin: auto;
+    height: auto;
 }
 
+.content-main-2 {
+    width: 33%;
+    margin: auto;
+    height: auto;
+}
 
+.content-main-3 {
+    width: 33%;
+    margin: auto;
+    height: auto;
+}
+
+/* Social Styles */
 .social {
     display: flex;
     justify-content: center;
@@ -199,13 +198,7 @@ input:checked + .slider:before {
     height: 50px;
 }
 
-.footer-separador {
-    background-color: var(--footer-text-color);
-    height: 2px;
-    max-width: 30px;
-    margin: 15px auto 20px;
-}
-
+/* Footer Styles */
 .footer-copyright {
     text-align: center;
     color: var(--footer-text-color);
@@ -214,6 +207,7 @@ input:checked + .slider:before {
     margin-bottom: 20px;
 }
 
+/* Background Image */
 body::before {
     content: "";
     position: fixed;
@@ -226,6 +220,7 @@ body::before {
     z-index: -1;
 }
 
+/* Dark Mode Styles */
 body.dark-mode {
     --primary-color: #333;
     --secondary-color: #555;

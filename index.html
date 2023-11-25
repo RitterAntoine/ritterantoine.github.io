@@ -1,9 +1,10 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Antoine Ritter's portfolio">
+    <meta name="description" content="Antoine Ritter's Portfolio">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Antoine Ritter</title>
     <link rel="stylesheet" href="src/styles/style.css">
 </head>
@@ -17,53 +18,70 @@
     </div>
     <div class="header-navigation">
         <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Projects</a>
-        <a href="#">Contact</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="">Contact</a>
         <label class="switch">
             <input type="checkbox" id="themeToggle">
             <span class="slider"></span>
         </label>
     </div>
 </header>
-<div class="content">
+<div class="content" id="home">
     <div class="content-title">
         <h1>Hi, I'm Antoine Ritter</h1>
-        <h2>Future IT engineer</h2>
+        <h2>Future IT Engineer</h2>
     </div>
-    <div class="content-separador"></div>
+    <div class="content-separator"></div>
     <div class="content-main">
         <div class="content-main-1">
             <p>
-                I'm a student at CESI engineering school in Nancy, France. I'm currently in my 3rd year of studies.
-                I'm going to graduate in 2026 with a master's degree in IT engineering. But I'm already looking for a doctoral thesis.
+                I'm a student at CESI engineering school in Nancy, France. Currently in my 3rd year of studies,
+                I'm set to graduate in 2026 with a master's degree in IT engineering. I'm already exploring potential
+                doctoral thesis topics.
             </p>
         </div>
         <div class="content-main-2">
             <p>
-                I'm passionate about IT, and I'm always looking to learn more about it.
-                I'm also interested in web development and I'm currently learning React.
+                Passionate about IT, I'm always eager to expand my knowledge. My focus includes web development, and
+                I'm currently enhancing my skills in React.
             </p>
         </div>
         <div class="content-main-3">
             <p>
-                I'm a very curious person and I'm always looking to learn new things.
-                I'm also a very motivated person and I'm always looking to improve myself.
+                As a naturally curious and motivated person, I am consistently seeking opportunities for personal and
+                professional growth.
             </p>
         </div>
     </div>
-    <div class="content-separador"></div>
-    <div class="content-secondary">
+    <div class="content-separator"></div>
+    <div class="content-secondary" id="about">
         <div class="content-secondary-1">
-            <h2>
-                My hobbies
-            </h2>
+            <h2>About Me</h2>
             <p>
-                I really love the astrophysics and the space conquest. I really like to learn about the universe and the stars.
+                I'm a technology enthusiast with a deep interest in the convergence of IT and other fields,
+                such as astrophysics. Apart from my academic pursuits, I enjoy exploring the wonders of the universe.
             </p>
         </div>
     </div>
+    <div class="content-separator"></div>
+    <div class="content-secondary" id="projects">
+        <div class="content-secondary-2">
+            <h2>Projects</h2>
+            <p>
+                Here are some of the projects I've worked on:
+            </p>
+            <ul>
+                <li>
+                    <strong>Personal Wiki: </strong> I've been working on a personal wiki. It's not ready yet, but I hope to have it up and running soon.
+                </li>
+                <li>
+                    <strong>Portfolio: </strong> The website you're currently on is my first project. I'm using it to learn web development.
+                </li>
 
+            </ul>
+        </div>
+    </div>
 </div>
 <footer>
     <div class="social">
@@ -78,7 +96,7 @@
             </a>
         </div>
     </div>
-    <div class="footer-separador"></div>
+    <div class="footer-separator"></div>
     <p class="footer-copyright">Copyright @ 2023</p>
 </footer>
 <script src="src/scripts/theme.js"></script>
