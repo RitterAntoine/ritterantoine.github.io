@@ -1,11 +1,15 @@
 :root {
     --text-font: 'Georgia', sans-serif;
     --text-font-size: 30px;
-    --primary-color: #EEE0F0;
-    --secondary-color: #BD8BC1;
-    --accent-color: #614063;
-    --text-color: #432645;
-    --background-color: #F4EEF6;
+    --primary-color: #6ACFC7; /* sarcelle duveteuse */
+    --secondary-color: #0C1A1A; /* Vert Cardin */
+    --accent-color: #BFA181;
+    --text-color: #581845;
+    --header-text-color: #581845;
+    --footer-text-color: #581845;
+    --background-color: #B4BAFF;
+    --header-background-color: #FFEBD8;
+    --footer-background-color: #FFEBD8;
     --border-color: #000000;
 }
 
@@ -16,7 +20,7 @@ body, html {
     min-height: 100vh;
     display: grid;
     grid-template-rows: 1fr auto;
-    position: relative; /* Make the body a positioning context */
+    position: relative;
 }
 
 header{
@@ -27,13 +31,13 @@ header{
     height: 90px;
     padding: 0 40px;
     justify-content: space-between;
-    color: var(--text-color);
-    background-color: var(--background-color);
+    color: var(--header-text-color);
+    background-color: var(--header-background-color);
 }
 
 footer {
     margin-top: 80px;
-    background: var(--secondary-color);
+    background: var(--footer-background-color);
 }
 
 .header-name{
@@ -48,6 +52,7 @@ footer {
     width: 50px;
     height: 50px;
     border-radius: 15%;
+    border: solid 2px var(--border-color);
 }
 
 .header-name .header-pfp {
@@ -96,7 +101,7 @@ footer {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #f4f4f5;
+    background-color: var(--secondary-color);
     transition: .4s;
     border-radius: 30px;
     border: solid 2px var(--border-color);
@@ -195,7 +200,7 @@ input:checked + .slider:before {
 }
 
 .footer-separador {
-    background-color: var(--text-color);
+    background-color: var(--footer-text-color);
     height: 2px;
     max-width: 30px;
     margin: 15px auto 20px;
@@ -203,7 +208,7 @@ input:checked + .slider:before {
 
 .footer-copyright {
     text-align: center;
-    color: var(--text-color);
+    color: var(--footer-text-color);
     font-size: 15px;
     font-weight: 1000;
     margin-bottom: 20px;
@@ -216,10 +221,9 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url("../img/bg.webp");
+    background-image: url("../img/bg-7.jpg");
     background-size: cover;
-    filter: invert(0); /* Default: no inversion */
-    z-index: -1; /* Place the pseudo-element behind the content */
+    z-index: -1;
 }
 
 body.dark-mode {
@@ -227,15 +231,10 @@ body.dark-mode {
     --secondary-color: #555;
     --accent-color: #777;
     --text-color: #fff;
+    --header-text-color: #fff;
+    --footer-text-color: #fff;
     --background-color: #222;
+    --header-background-color: #333;
+    --footer-background-color: #333;
     --border-color: #fff;
-}
-
-body.dark-mode::before {
-    filter: invert(1); /* Invert colors for dark mode */
-}
-
-body.dark-mode .content {
-    background-color: var(--background-color);
-    opacity: 0.9;
 }
