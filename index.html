@@ -19,6 +19,43 @@
             </ul>
         </div>
     </nav>
+
+    <section id="profile">
+        <div class="section__pic-container">
+            <img src="./assets/logo.webp" alt="Ritter Antoine profile picture" />
+        </div>
+        <div class="section__text">
+            <p class="section__text__p1">Hello, I'm</p>
+            <h1 class="title">Ritter Antoine</h1>
+            <p class="section__text__p2">Computer Science student</p>
+            <div class="btn-container">
+                <button
+                        class="btn btn-color-2"
+                        onclick="window.open('./assets/resume-example.pdf')"
+                >
+                    Download CV
+                </button>
+                <button class="btn btn-color-1" onclick="location.href='./#contact'">
+                    Contact Info
+                </button>
+            </div>
+            <div id="socials-container">
+                <img
+                        src="./assets/linkedin.png"
+                        alt="My LinkedIn profile"
+                        class="icon"
+                        onclick="location.href='https://www.linkedin.com/in/antoine-ritter-cesi/'"
+                />
+                <img
+                        src="./assets/github.png"
+                        alt="My Github profile"
+                        class="icon"
+                        onclick="location.href='https://github.com/RitterAntoine'"
+                />
+            </div>
+        </div>
+    </section>
+
     <script src="script.js"></script>
 </body>
 </html>
