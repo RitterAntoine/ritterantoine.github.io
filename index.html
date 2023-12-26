@@ -1,86 +1,123 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Antoine Ritter's portfolio">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Antoine Ritter</title>
-    <link rel="stylesheet" href="src/styles/style.css">
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<header>
-    <div class="header-name">
-        <div class="header-pfp">
-            <img src="src/img/logo.webp" alt="Antoine Ritter">
+    <nav id="desktop-nav">
+        <div class="logo">Ritter Antoine</div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </div>
-        Antoine Ritter
-    </div>
-    <div class="header-navigation">
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Projects</a>
-        <a href="#">Contact</a>
-        <label class="switch">
-            <input type="checkbox" id="themeToggle">
-            <span class="slider"></span>
-        </label>
-    </div>
-</header>
-<div class="content">
-    <div class="content-title">
-        <h1>Hi, I'm Antoine Ritter</h1>
-        <h2>Future IT engineer</h2>
-    </div>
-    <div class="content-separador"></div>
-    <div class="content-main">
-        <div class="content-main-1">
-            <p>
-                I'm a student at CESI engineering school in Nancy, France. I'm currently in my 3rd year of studies.
-                I'm going to graduate in 2026 with a master's degree in IT engineering. But I'm already looking for a doctoral thesis.
-            </p>
-        </div>
-        <div class="content-main-2">
-            <p>
-                I'm passionate about IT, and I'm always looking to learn more about it.
-                I'm also interested in web development and I'm currently learning React.
-            </p>
-        </div>
-        <div class="content-main-3">
-            <p>
-                I'm a very curious person and I'm always looking to learn new things.
-                I'm also a very motivated person and I'm always looking to improve myself.
-            </p>
-        </div>
-    </div>
-    <div class="content-separador"></div>
-    <div class="content-secondary">
-        <div class="content-secondary-1">
-            <h2>
-                My hobbies
-            </h2>
-            <p>
-                I really love the astrophysics and the space conquest. I really like to learn about the universe and the stars.
-            </p>
-        </div>
-    </div>
+    </nav>
 
-</div>
-<footer>
-    <div class="social">
-        <div class="social__title">
-            <a href="https://github.com/RitterAntoine" class="footer__link" aria-label="link to my github">
-                <img src="src/img/github-logo.png" alt="">
-            </a>
+    <section id="profile">
+        <div class="section__pic-container">
+            <img src="./assets/logo.webp" alt="Ritter Antoine profile picture" />
         </div>
-        <div class="social__title">
-            <a href="https://www.linkedin.com/in/antoine-ritter-cesi/" class="footer__link" aria-label="link to my linkedin">
-                <img src="src/img/linkedin-logo.png" alt="">
-            </a>
+        <div class="section__text">
+            <p class="section__text__p1">Hello, I'm</p>
+            <h1 class="title">Ritter Antoine</h1>
+            <p class="section__text__p2">Computer Science student</p>
+            <div class="btn-container">
+                <button
+                        class="btn btn-color-2"
+                        onclick="window.open('./assets/CV-RITTER-Antoine.pdf')"
+                >
+                    Download CV
+                </button>
+                <button class="btn btn-color-1" onclick="location.href='./#contact'">
+                    Contact Info
+                </button>
+            </div>
+            <div id="socials-container">
+                <img
+                        src="./assets/linkedin.png"
+                        alt="My LinkedIn profile"
+                        class="icon"
+                        onclick="location.href='https://www.linkedin.com/in/antoine-ritter-cesi/'"
+                />
+                <img
+                        src="./assets/github.png"
+                        alt="My Github profile"
+                        class="icon"
+                        onclick="location.href='https://github.com/RitterAntoine'"
+                />
+            </div>
         </div>
-    </div>
-    <div class="footer-separador"></div>
-    <p class="footer-copyright">Copyright @ 2023</p>
-</footer>
-<script src="src/scripts/theme.js"></script>
+    </section>
+
+<<<<<<< HEAD
+    <section id="about">
+        <p class="section__text__p1">Get To Know More</p>
+        <h1 class="title">About Me</h1>
+        <div class="section-container">
+            <div class="section__pic-container">
+                <img
+                        src="./assets/logo.webp"
+                        alt="Logo picture"
+                        class="about-pic"
+                />
+            </div>
+            <div class="about-details-container">
+                <div class="about-containers">
+                    <div class="details-container">
+                        <img
+                                src="./assets/experience.png"
+                                alt="Experience icon"
+                                class="icon"
+                        />
+                        <h3>Experience</h3>
+                        <p>
+                            Assistant, Techlab Ecole des Mines Nancy, Apr-Jul 2023 <br />
+                            Language Model Creation
+                        </p>
+                    </div>
+                    <div class="details-container">
+                        <img
+                                src="./assets/education.png"
+                                alt="Education icon"
+                                class="icon"
+                        />
+                        <h3>Education</h3>
+                        <p>
+                            1st Year, Computer Science, CESI Ecole d’ingénieur, 2021-2026<br />
+                            Baccalauréat, Lycée La Malgrange, 2018-2021
+                        </p>
+                    </div>
+                </div>
+                <div class="text-container">
+                    <p>
+                        I am a first-year student in the computer engineering program (BAC+3). Passionate
+                        about technology, I am motivated to apply my programming and problem-solving
+                        skills in practical scenarios. My goal is to explore various fields in computer
+                        science during my academic and professional journey to discover my career path.
+                        Currently seeking a 4-month internship from January 15 to April 26 to gain
+                        valuable professional experience and contribute to innovative projects while
+                        continuing to develop my skills.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <img
+                src="./assets/arrow.png"
+                alt="Arrow icon"
+                class="icon arrow"
+                onclick="location.href='./#experience'"
+        />
+    </section>
+
+=======
+>>>>>>> 4a5f47bb4bf18bcc26e7ccced0dc303630ec62ab
+    <script src="script.js"></script>
 </body>
 </html>
