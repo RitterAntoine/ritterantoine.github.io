@@ -15,7 +15,6 @@ This portfolio website serves as my digital resume. Here, you can gain insights 
 
 ## Features
 
-- **Responsive Design:** I've designed this website to be fully responsive, ensuring optimal viewing experience across various devices and screen sizes.
 - **Navigation:** Easily navigate through different sections of the website using the navigation menu.
 - **About Section:** Learn more about me, including my background, education, and interests.
 - **Experience Section:** Discover my internship experiences, including the organizations, duration, and projects I've undertaken.
