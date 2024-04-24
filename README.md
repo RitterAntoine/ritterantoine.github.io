@@ -1,4 +1,3 @@
-# r-sum-
 # Antoine Ritter Portfolio
 
 Welcome to my portfolio website! This platform showcases my skills, experiences, projects, and contact information.
