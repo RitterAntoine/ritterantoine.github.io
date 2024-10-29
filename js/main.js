@@ -5,6 +5,8 @@ var textarea = document.getElementById("texter");
 var terminal = document.getElementById("terminal");
 
 var git = 0;
+var pw = false;
+let pwd = false;
 var commands = [];
 
 setTimeout(function() {
@@ -15,8 +17,8 @@ setTimeout(function() {
 window.addEventListener("keyup", enterKey);
 
 console.log(
-  "%cYou hacked my password!ðŸ˜ ",
-  "color: #04ff00; font-weight: bold; font-size: 24px;"
+  "%cWelcome to the terminal!",
+  "color: blue; font-weight: bold; font-size: 24px;"
 );
 
 //init
@@ -26,29 +28,29 @@ command.innerHTML = textarea.value;
 function enterKey(e) {
   if (e.keyCode == 181) {
     document.location.reload(true);
-  } else {
-    if (e.keyCode == 13) {
-      commands.push(command.innerHTML);
-      git = commands.length;
-      addLine("visitor@fkcodes.com:~$ " + command.innerHTML, "no-animation", 0);
-      commander(command.innerHTML.toLowerCase());
-      command.innerHTML = "";
+  } else if (e.keyCode == 13) {
+    commands.push(command.innerHTML);
+    git = commands.length;
+    addLine("visitor@lumine.com:~$ " + command.innerHTML, "no-animation", 0);
+    commander(command.innerHTML.toLowerCase());
+    command.innerHTML = "";
+    textarea.value = "";
+  }
+
+  if (e.keyCode == 38 && git != 0) {
+    git -= 1;
+    textarea.value = commands[git];
+    command.innerHTML = textarea.value;
+  }
+
+  if (e.keyCode == 40 && git != commands.length) {
+    git += 1;
+    if (commands[git] === undefined) {
       textarea.value = "";
-    }
-    if (e.keyCode == 38 && git != 0) {
-      git -= 1;
+    } else {
       textarea.value = commands[git];
-      command.innerHTML = textarea.value;
     }
-    if (e.keyCode == 40 && git != commands.length) {
-      git += 1;
-      if (commands[git] === undefined) {
-        textarea.value = "";
-      } else {
-        textarea.value = commands[git];
-      }
-      command.innerHTML = textarea.value;
-    }
+    command.innerHTML = textarea.value;
   }
 }
 
@@ -57,8 +59,21 @@ function commander(cmd) {
     case "help":
       loopLines(help, "color2 margin", 80);
       break;
-    case "whoami":
-      loopLines(whoami, "color2 margin", 80);
+    case "whois":
+      loopLines(whois, "color2 margin", 80);
+      break;
+    case "whois":
+      loopLines(whois, "color2 margin", 80);
+      break;
+    case "video":
+      addLine("Opening YouTube...", "color2", 80);
+      newTab(youtube);
+      break;
+    case "sudo":
+      addLine("Oh no, you're not admin...", "color2", 80);
+      setTimeout(function() {
+        window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ');
+      }, 1000); 
       break;
     case "social":
       loopLines(social, "color2 margin", 80);

@@ -2,7 +2,7 @@ var linkedin = "https://www.linkedin.com/in/antoine-ritter-cesi/";
 var github = "https://github.com/RitterAntoine";
 var email = 'mailto:antoine.ritter@viacesi.fr';
 
-whoami = [
+whois = [
   "<br>",
   "Hi! I'm Antoine!",
   "I am a second-year student in the computer engineering program (BAC+4).", 
@@ -31,7 +31,7 @@ projects = [
 
 help = [
   "<br>",
-  '<span class="command">whoami</span>         Who am I?',
+  '<span class="command">whois</span>          Who am I?',
   '<span class="command">social</span>         Display social networks',
   '<span class="command">projects</span>       View coding projects',
   '<span class="command">history</span>        View command history',
