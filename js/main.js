@@ -5,8 +5,6 @@ var textarea = document.getElementById("texter");
 var terminal = document.getElementById("terminal");
 
 var git = 0;
-var pw = false;
-let pwd = false;
 var commands = [];
 
 setTimeout(function() {
@@ -20,7 +18,6 @@ console.log(
   "%cYou hacked my password!ðŸ˜ ",
   "color: #04ff00; font-weight: bold; font-size: 24px;"
 );
-console.log("%cPassword: '" + password + "' - I wonder what it does?ðŸ¤”", "color: grey");
 
 //init
 textarea.value = "";
@@ -29,28 +26,6 @@ command.innerHTML = textarea.value;
 function enterKey(e) {
   if (e.keyCode == 181) {
     document.location.reload(true);
-  }
-  if (pw) {
-    let et = "*";
-    let w = textarea.value.length;
-    command.innerHTML = et.repeat(w);
-    if (textarea.value === password) {
-      pwd = true;
-    }
-    if (pwd && e.keyCode == 13) {
-      loopLines(secret, "color2 margin", 120);
-      command.innerHTML = "";
-      textarea.value = "";
-      pwd = false;
-      pw = false;
-      liner.classList.remove("password");
-    } else if (e.keyCode == 13) {
-      addLine("Wrong password", "error", 0);
-      command.innerHTML = "";
-      textarea.value = "";
-      pw = false;
-      liner.classList.remove("password");
-    }
   } else {
     if (e.keyCode == 13) {
       commands.push(command.innerHTML);
@@ -82,34 +57,14 @@ function commander(cmd) {
     case "help":
       loopLines(help, "color2 margin", 80);
       break;
-    case "whois":
-      loopLines(whois, "color2 margin", 80);
-      break;
     case "whoami":
       loopLines(whoami, "color2 margin", 80);
-      break;
-    case "video":
-      addLine("Opening YouTube...", "color2", 80);
-      newTab(youtube);
-      break;
-    case "sudo":
-      addLine("Oh no, you're not admin...", "color2", 80);
-      setTimeout(function() {
-        window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ');
-      }, 1000); 
       break;
     case "social":
       loopLines(social, "color2 margin", 80);
       break;
-    case "secret":
-      liner.classList.add("password");
-      pw = true;
-      break;
     case "projects":
       loopLines(projects, "color2 margin", 80);
-      break;
-    case "password":
-      addLine("<span class=\"inherit\"> Lol! You're joking, right? You\'re gonna have to try harder than that!ðŸ˜‚</span>", "error", 100);
       break;
     case "history":
       addLine("<br>", "", 0);

@@ -63,9 +63,6 @@ body {
     color: #519975;
     content: "visitor@lumine.com:~$";
   }
-  #liner.password::before {
-    content: "Password:";
-  }
   @keyframes show {
     from {
       opacity: 0;

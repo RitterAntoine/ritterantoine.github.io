@@ -1,4 +1,3 @@
-var password = "lumine";
 var linkedin = "https://www.linkedin.com/in/antoine-ritter-cesi/";
 var github = "https://github.com/RitterAntoine";
 var email = 'mailto:antoine.ritter@viacesi.fr';
