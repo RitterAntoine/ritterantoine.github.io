@@ -1,214 +1,43 @@
+
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+<html>
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QJ9TR5T9S2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-QJ9TR5T9S2');
+    </script>
+    <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Antoine Ritter</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="./assets/logo.webp">
-</head>
-<body>
-    <nav id="desktop-nav">
-        <div class="logo">Ritter Antoine</div>
-        <div>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <section id="profile">
-        <div class="section__pic-container">
-            <img src="./assets/logo.webp" alt="Ritter Antoine profile picture" />
-        </div>
-        <div class="section__text">
-            <p class="section__text__p1">Hello, I'm</p>
-            <h1 class="title">Ritter Antoine</h1>
-            <p class="section__text__p2">Computer Science student</p>
-            <div class="btn-container">
-                <button
-                        class="btn btn-color-2"
-                        onclick="window.open('./assets/Resume_Ritter_Antoine.pdf')"
-                >
-                    Download Resume
-                </button>
-                <button class="btn btn-color-1" onclick="location.href='./#contact'">
-                    Contact Info
-                </button>
-            </div>
-            <div id="socials-container">
-                <img
-                        src="./assets/linkedin.png"
-                        alt="My LinkedIn profile"
-                        class="icon"
-                        onclick="location.href='https://www.linkedin.com/in/antoine-ritter-cesi/'"
-                />
-                <img
-                        src="./assets/github.png"
-                        alt="My Github profile"
-                        class="icon"
-                        onclick="location.href='https://github.com/RitterAntoine'"
-                />
-            </div>
-        </div>
-    </section>
-    <section id="about">
-        <p class="section__text__p1">Get To Know More</p>
-        <h1 class="title">About Me</h1>
-        <div class="section-container">
-            <div class="section__pic-container">
-                <img
-                        src="./assets/galaxy_1_832x1216.webp"
-                        alt="Image galaxy_1_832x1216"
-                        class="about-pic"
-                />
-            </div>
-            <div class="about-details-container">
-                <div class="about-containers">
-                    <div class="details-container">
-                        <img
-                                src="./assets/education.png"
-                                alt="Education icon"
-                                class="icon"
-                        />
-                        <h3>Education</h3>
-                        <p>
-                            1st Year, Computer Science, CESI Ecole d’ingénieur, 2021-2026<br />
-                            Baccalauréat, Lycée La Malgrange, 2018-2021
-                        </p>
-                    </div>
-                </div>
-                <div class="text-container">
-                    <p>
-                        I am a first-year student in the computer engineering program (BAC+3). Passionate about technology, I am motivated to apply my programming and problem-solving skills in practical scenarios. My goal is to explore various fields in computer science during my academic and professional journey. My interest in research stems from my previous experiences working in both a laboratory and a research center. These experiences have fueled my passion for delving deeper into the realms of computer science and discovering innovative solutions to complex problems. Therefore, I am eager to further pursue a career in research, where I can contribute to advancements in technology and make meaningful contributions to the field.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="experience">
-        <p class="section__text__p1">Explore My</p>
-        <h1 class="title">Experience</h1>
-        <div class="section-container">
-            <div class="section__pic-container">
-                <img
-                        src="./assets/galaxy_2_832x1216.webp"
-                        alt="Image galaxy_observer_1_832x1216"
-                        class="about-pic"
-                />
-            </div>
-            <div class="about-details-container">
-                <div class="about-containers">
-                    <div class="details-container">
-                        <img
-                                src="./assets/experience.png"
-                                alt="Experience icon"
-                                class="icon"
-                        />
-                        <h3>Experience</h3>
-                        <p>
-                            Intern, Techlab Ecole des Mines Nancy, Apr-Jul 2023 <br />
-                            Language Model Creation
-                        </p>
-                    </div>
-                    <div class="details-container">
-                        <img
-                                src="./assets/experience.png"
-                                alt="Experience icon"
-                                class="icon"
-                        />
-                        <h3>Experience</h3>
-                        <p>
-                            Intern, Inria, Jan-Apr 2024 <br />
-                            Trajectory Extraction Algorithm Implementation
-                        </p>
-                    </div>
-                </div>
-                <div class="text-container">
-                    <p>
-                        My internships have been pivotal in shaping my career trajectory towards research. At Techlab Ecole des Mines Nancy, I focused on language models, deepening my understanding of AI and honing my technical skills. This experience provided me with autonomy and precision crucial for my future in computer science.
-
-                        Building on this, my internship at Inria strengthened my commitment to research and innovation. Implementing trajectory extraction algorithms for anisotropic 3D printing using C++, I gained insights into 3D printing technology and software development. These internships, in chronological order, have fueled my passion for exploring innovative solutions in technology.
-
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="projects">
-        <p class="section__text__p1">Browse My Recent</p>
-        <h1 class="title">Projects</h1>
-        <div class="section-container">
-            <div class="section__pic-container">
-                <img
-                        src="./assets/galaxy_2_832x1216.webp"
-                        alt="Image galaxy_observer_1_832x1216"
-                        class="about-pic"
-                />
-            </div>
-            <div class="about-details-container">
-                <div class="about-containers">
-                    <div class="details-container">
-                        <img
-                                src="./assets/experience.png"
-                                alt="Experience icon"
-                                class="icon"
-                        />
-                        <h3>Experience</h3>
-                        <p>
-                            Open Source Trajectory Extraction Project for Anisotropic 3D Printing <br />
-                        </p>
-                    </div>
-                </div>
-                <div class="text-container">
-                    <p>
-                        During my internship at Inria, I worked on a project focused on trajectory extraction for anisotropic 3D printing. The main objective was to translate existing Python code into C++, sourced from a research paper. This project involved creating a C++ library containing the necessary functionalities to generate trajectories suited for anisotropic 3D printing. The library was designed to extract cycles from a scalar field representing printing trajectories. These cycles, optimized to follow anisotropic variations, ensure high-quality printing results. The project is open source and available on my GitHub, providing the community with the opportunity to contribute and benefit from these functionalities for their own 3D printing projects.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="contact">
-        <p class="section__text__p1">Get in Touch</p>
-        <h1 class="title">Contact Me</h1>
-        <div class="contact-info-upper-container">
-            <div class="contact-info-container">
-                <img
-                        src="./assets/email.png"
-                        alt="Email icon"
-                        class="icon contact-icon email-icon"
-                />
-                <p>antoine.ritter@viacesi.fr</p>
-            </div>
-            <div class="contact-info-container">
-                <img
-                        src="./assets/linkedin.png"
-                        alt="LinkedIn icon"
-                        class="icon contact-icon"
-                />
-                <p><a href="https://www.linkedin.com/in/antoine-ritter-cesi/">LinkedIn</a></p>
-            </div>
-        </div>
-    </section>
-    <footer>
-        <nav>
-            <div class="nav-links-container">
-                <ul class="nav-links">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
-        <p>Copyright &#169; 2023-2024 Ritter Antoine. All Rights Reserved.</p>
-    </footer>
-    <script src="script.js"></script>
-</body>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lumine | Terminal</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+    <link rel="icon" type="image/x-icon" href="assets/logo.webp" />
+  </head>
+  <body>
+    <div id="terminal">
+      <a id="before"></a>
+    </div>
+    <div id="command" onclick="$('texter').focus();">
+      <textarea
+        type="text"
+        id="texter"
+        onkeyup="typeIt(this, event)"
+        onkeydown="typeIt(this, event); 
+                   moveIt(this.value.length, event)"
+        onkeypress="typeIt(this, event);"
+        autofocus
+      ></textarea>
+      <div id="liner">
+        <span id="typer"></span><b class="cursor" id="cursor">█</b>
+      </div>
+    </div>
+    <script src="js/caret.js"></script>
+    <script src="js/commands.js"></script>
+    <script src="js/main.js"></script>
+  </body>
 </html>
