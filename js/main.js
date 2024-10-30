@@ -1,60 +1,60 @@
-var before = document.getElementById("before");
-var liner = document.getElementById("liner");
-var command = document.getElementById("typer"); 
-var textarea = document.getElementById("texter"); 
-var terminal = document.getElementById("terminal");
+let beforeElement = document.getElementById("before");
+const linerElement = document.getElementById("liner");
+const commandElement = document.getElementById("typer"); 
+const textareaElement = document.getElementById("texter"); 
+const terminalElement = document.getElementById("terminal");
 
-var git = 0;
-var pw = false;
-let pwd = false;
-var commands = [];
+var commandIndex = 0;
+var isPasswordMode = false;
+let isPwdMode = false;
+var commandHistory = [];
 
 setTimeout(function() {
   loopLines(banner, "", 80);
-  textarea.focus();
+  textareaElement.focus();
 }, 100);
 
-window.addEventListener("keyup", enterKey);
+window.addEventListener("keyup", handleKeyUp);
 
 console.log(
   "%cWelcome to the terminal!",
-  "color: blue; font-weight: bold; font-size: 24px;"
+  "color: Purple; font-weight: bold; font-size: 24px;"
 );
 
-//init
-textarea.value = "";
-command.innerHTML = textarea.value;
+//Initialise the terminal
+textareaElement.value = "";
+commandElement.innerHTML = textareaElement.value;
 
-function enterKey(e) {
+function handleKeyUp(e) {
   if (e.keyCode == 181) {
     document.location.reload(true);
   } else if (e.keyCode == 13) {
-    commands.push(command.innerHTML);
-    git = commands.length;
-    addLine("visitor@lumine.com:~$ " + command.innerHTML, "no-animation", 0);
-    commander(command.innerHTML.toLowerCase());
-    command.innerHTML = "";
-    textarea.value = "";
+    commandHistory.push(commandElement.innerHTML);
+    commandIndex = commandHistory.length;
+    addLine("visitor@lumine.com:~$ " + commandElement.innerHTML, "no-animation", 0);
+    executeCommand(commandElement.innerHTML.toLowerCase());
+    commandElement.innerHTML = "";
+    textareaElement.value = "";
   }
 
-  if (e.keyCode == 38 && git != 0) {
-    git -= 1;
-    textarea.value = commands[git];
-    command.innerHTML = textarea.value;
+  if (e.keyCode == 38 && commandIndex != 0) {
+    commandIndex -= 1;
+    textareaElement.value = commandHistory[commandIndex];
+    commandElement.innerHTML = textareaElement.value;
   }
 
-  if (e.keyCode == 40 && git != commands.length) {
-    git += 1;
-    if (commands[git] === undefined) {
-      textarea.value = "";
+  if (e.keyCode == 40 && commandIndex != commandHistory.length) {
+    commandIndex += 1;
+    if (commandHistory[commandIndex] === undefined) {
+      textareaElement.value = "";
     } else {
-      textarea.value = commands[git];
+      textareaElement.value = commandHistory[commandIndex];
     }
-    command.innerHTML = textarea.value;
+    commandElement.innerHTML = textareaElement.value;
   }
 }
 
-function commander(cmd) {
+function executeCommand(cmd) {
   switch (cmd.toLowerCase()) {
     case "help":
       loopLines(help, "color2 margin", 80);
@@ -62,12 +62,9 @@ function commander(cmd) {
     case "whois":
       loopLines(whois, "color2 margin", 80);
       break;
-    case "whois":
-      loopLines(whois, "color2 margin", 80);
-      break;
     case "video":
       addLine("Opening YouTube...", "color2", 80);
-      newTab(youtube);
+      openNewTab(youtube);
       break;
     case "sudo":
       addLine("Oh no, you're not admin...", "color2", 80);
@@ -83,17 +80,17 @@ function commander(cmd) {
       break;
     case "history":
       addLine("<br>", "", 0);
-      loopLines(commands, "color2", 80);
-      addLine("<br>", "command", 80 * commands.length + 50);
+      loopLines(commandHistory, "color2", 80);
+      addLine("<br>", "command", 80 * commandHistory.length + 50);
       break;
     case "email":
       addLine('Opening mailto:<a href="mailto:antoine.ritter@viacesi.fr">antoine.ritter@viacesi.fr</a>...', "color2", 80);
-      newTab(email);
+      openNewTab(email);
       break;
     case "clear":
       setTimeout(function() {
-        terminal.innerHTML = '<a id="before"></a>';
-        before = document.getElementById("before");
+        terminalElement.innerHTML = '<a id="before"></a>';
+        beforeElement = document.getElementById("before");
       }, 1);
       break;
     case "banner":
@@ -102,11 +99,11 @@ function commander(cmd) {
     // socials
     case "linkedin":
       addLine("Opening LinkedIn...", "color2", 0);
-      newTab(linkedin);
+      openNewTab(linkedin);
       break;
     case "github":
       addLine("Opening GitHub...", "color2", 0);
-      newTab(github);
+      openNewTab(github);
       break;
     default:
       addLine("<span class=\"inherit\">Command not found. For a list of commands, type <span class=\"command\">'help'</span>.</span>", "error", 100);
@@ -114,28 +111,28 @@ function commander(cmd) {
   }
 }
 
-function newTab(link) {
+function openNewTab(link) {
   setTimeout(function() {
     window.open(link, "_blank");
   }, 500);
 }
 
 function addLine(text, style, time) {
-  var t = "";
+  var formattedText = "";
   for (let i = 0; i < text.length; i++) {
     if (text.charAt(i) == " " && text.charAt(i + 1) == " ") {
-      t += "&nbsp;&nbsp;";
+      formattedText += "&nbsp;&nbsp;";
       i++;
     } else {
-      t += text.charAt(i);
+      formattedText += text.charAt(i);
     }
   }
   setTimeout(function() {
-    var next = document.createElement("p");
-    next.innerHTML = t;
-    next.className = style;
+    var nextElement = document.createElement("p");
+    nextElement.innerHTML = formattedText;
+    nextElement.className = style;
 
-    before.parentNode.insertBefore(next, before);
+    beforeElement.parentNode.insertBefore(nextElement, beforeElement);
 
     window.scrollTo(0, document.body.offsetHeight);
   }, time);

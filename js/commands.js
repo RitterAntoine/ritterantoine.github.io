@@ -1,44 +1,42 @@
-var linkedin = "https://www.linkedin.com/in/antoine-ritter-cesi/";
-var github = "https://github.com/RitterAntoine";
+var linkedin_url = "https://www.linkedin.com/in/antoine-ritter-cesi/";
+var github_url = "https://github.com/RitterAntoine";
 var email = 'mailto:antoine.ritter@viacesi.fr';
 
 whois = [
-  "<br>",
-  "Hi! I'm Antoine!",
-  "I am a second-year student in the computer engineering program (BAC+4).", 
-  "Passionate about technology, I am motivated to apply my programming and problem-solving skills in practical scenarios.",
-  "My goal is to explore various fields in computer science during my academic and professional journey.",
-  "My interest in research stems from my previous experiences working in both laboratories and a research centers.",
-  "These experiences have fueled my passion for delving deeper into the realms of computer science and discovering",
-  "innovative solutions to complex problems. Therefore, I am eager to further pursue a career in research,",
-  "where I can contribute to advancements in technology and make meaningful contributions to the field.",
-  "like this terminal website.",
-  "<br>"
+"<br>",
+"Hey there! I'm Antoine!",
+"I'm a second-year computer engineering student (BAC+4), and yes, I speak fluent code!",
+"Tech enthusiast by day, adventurer by night. I love climbing, exploring space, and learning new things.",
+"My mission? To explore the vast universe of computer science, one byte at a time.",
+"I've dabbled in labs and research centers, fueling my curiosity and passion for innovation.",
+"Dreaming of a future where I can contribute to groundbreaking tech advancements.",
+"This terminal website? Just one of my many adventures in the coding world. Enjoy the ride!",
+"<br>"
 ];
 
 social = [
   "<br>",
-  'linkedin       <a href="' + linkedin + '" target="_blank">linkedin/ritterantoine' + "</a>",
-  'github         <a href="' + github + '" target="_blank">github/ritterantoine' + "</a>",
+  'linkedin       <a href="' + linkedin_url + '" target="_blank">linkedin/ritterantoine' + "</a>",
+  'github         <a href="' + github_url + '" target="_blank">github/ritterantoine' + "</a>",
   "<br>"
 ];
 
 projects = [
   "<br>",
-  "Still curating... most projects are offline, on GitHub, or confidential.",
+  "Coming soon!",
   "<br>"
 ];
 
 help = [
   "<br>",
   '<span class="command">whois</span>          Who am I?',
-  '<span class="command">social</span>         Display social networks',
   '<span class="command">projects</span>       View coding projects',
+  '<span class="command">social</span>         Show social networks',
+  '<span class="command">email</span>          Send me an email',
+  '<span class="command">banner</span>         Display the banner',
+  '<span class="command">help</span>           You already know what this does',
   '<span class="command">history</span>        View command history',
-  '<span class="command">help</span>           You obviously already know what this does',
-  '<span class="command">email</span>          Do not email me',
-  '<span class="command">clear</span>          Clear terminal',
-  '<span class="command">banner</span>         Display the header',
+  '<span class="command">clear</span>          Clear the terminal',
   "<br>",
 ];
 
@@ -51,6 +49,5 @@ banner = [
   "  /_____/\\__,_/_/ /_/ /_/_/_/ /_/\\___/   ",
   "                                        ",
   "                                        ",
-  '<span class="color2">Welcome to my interactive web terminal.</span>',
-  "<span class=\"color2\">For a list of available commands, type</span> <span class=\"command\">'help'</span><span class=\"color2\">.</span>",
-];
+  '<span class="color2">Welcome to my simple interactive web terminal.</span>',
+  "<span class=\"color2\">Type 'help' for a list of commands.</span>",];

@@ -1,38 +1,38 @@
-function $(elid) {
-    return document.getElementById(elid);
-  }
-  
-var cursor;
-window.onload = init;
-
-function init() {
-  cursor = $("cursor");
-  cursor.style.left = "0px";
+function getElementById(elementId) {
+  return document.getElementById(elementId);
 }
 
-function nl2br(txt) {
-  return txt.replace(/\n/g, '');
+var cursorElement;
+window.onload = initializeCursor;
+
+function initializeCursor() {
+  cursorElement = getElementById("cursor_id");
+  cursorElement.style.left = "0px";
 }
 
-function typeIt(from, e) {
-  e = e || window.event;
-  var w = $("typer");
-  var tw = from.value;
-  if (!pw){
-    w.innerHTML = nl2br(tw);
-  }
+function replaceNewlinesWithSpaces(text) {
+  return text.replace(/\n/g, '');
 }
 
-function moveIt(count, e) {
-  e = e || window.event;
-  var keycode = e.keyCode || e.which;
-  if (keycode == 37 && parseInt(cursor.style.left) >= (0 - ((count - 1) * 10))) {
-    cursor.style.left = parseInt(cursor.style.left) - 10 + "px";
-  } else if (keycode == 39 && (parseInt(cursor.style.left) + 10) <= 0) {
-    cursor.style.left = parseInt(cursor.style.left) + 10 + "px";
+function updateTyperContent(sourceElement, event) {
+  event = event || window.event;
+  var typerElement = getElementById("typer");
+  var sourceText = sourceElement.value;
+  if (!isPasswordMode) {
+      typerElement.innerHTML = replaceNewlinesWithSpaces(sourceText);
   }
 }
 
-function alert(txt) {
-  console.log(txt);
+function moveCursor(count, event) {
+  event = event || window.event;
+  var keycode = event.keyCode || event.which;
+  if (keycode == 37 && parseInt(cursorElement.style.left) >= (0 - ((count - 1) * 10))) {
+      cursorElement.style.left = parseInt(cursorElement.style.left) - 10 + "px";
+  } else if (keycode == 39 && (parseInt(cursorElement.style.left) + 10) <= 0) {
+      cursorElement.style.left = parseInt(cursorElement.style.left) + 10 + "px";
+  }
+}
+
+function logMessage(message) {
+  console.log(message);
 }
