@@ -1,4 +1,3 @@
-var linkedin_url = "https://www.linkedin.com/in/antoine-ritter-cesi/";
 var github_url = "https://github.com/RitterAntoine";
 var email = 'mailto:antoine.ritter@viacesi.fr';
 
@@ -16,7 +15,6 @@ whois = [
 
 social = [
   "<br>",
-  'linkedin       <a href="' + linkedin_url + '" target="_blank">linkedin/ritterantoine' + "</a>",
   'github         <a href="' + github_url + '" target="_blank">github/ritterantoine' + "</a>",
   "<br>"
 ];

@@ -97,10 +97,6 @@ function executeCommand(cmd) {
       loopLines(banner, "", 80);
       break;
     // socials
-    case "linkedin":
-      addLine("Opening LinkedIn...", "color2", 0);
-      openNewTab(linkedin);
-      break;
     case "github":
       addLine("Opening GitHub...", "color2", 0);
       openNewTab(github);
