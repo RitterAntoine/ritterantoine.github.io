@@ -75,6 +75,7 @@ help = [
   '<span class="command">help</span>           You already know what this does',
   '<span class="command">history</span>        View command history',
   '<span class="command">clear</span>          Clear the terminal',
+  '<span class="command">exit</span>           Close the terminal',
   "<br>",
 ];
 

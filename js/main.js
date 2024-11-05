@@ -101,6 +101,10 @@ function executeCommand(cmd) {
       addLine("Opening GitHub...", "color2", 0);
       openNewTab(github);
       break;
+    // exit
+    case "exit":
+      closeTab();
+      break;
     default:
       addLine("<span class=\"inherit\">Command not found. For a list of commands, type <span class=\"command\">'help'</span>.</span>", "error", 100);
       break;
@@ -111,6 +115,13 @@ function openNewTab(link) {
   setTimeout(function() {
     window.open(link, "_blank");
   }, 500);
+}
+
+function closeTab() {
+  addLine("Closing tab...", "color2", 0);
+  setTimeout(function() {
+    window.close();
+  }, 1000);
 }
 
 function addLine(text, style, time) {
