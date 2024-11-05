@@ -19,10 +19,49 @@ social = [
   "<br>"
 ];
 
+
+
 projects = [
   "<br>",
-  "Coming soon!",
-  "<br>"
+  "Here are some of my coding projects:",
+  "<br>",
+  "<b>Autonomous Solar System Simulation</b>",
+  "<br>",
+  "This project simulates the motion of celestial bodies in our solar system using a simple physics engine.",
+  "The simulation is visualized with a graphical interface, allowing users to observe the orbits of planets around the Sun.",
+  "GitHub: <a href='https://github.com/RitterAntoine/SolarSystemSimulation' target='_blank'>SolarSystemSimulation</a>",
+  "<br>",
+  "--------------------------------------------------------------------------------------------------------------------------------------------",
+  "<br>",
+  "<b>Orientable Dense Cyclic Infill for Anisotropic Appearance Fabrication - C++ Code</b>",
+  "<br>",
+  "This project provides an implementation of certain parts of the project 'Orientable Dense Cyclic Infill for Anisotropic Appearance Fabrication' in C++.",
+  "Initially introduced by researchers affiliated with Inria and showcased at the SIGGRAPH 2023 conference,",
+  "this project aims to facilitate the use of the algorithm by migrating its code from Python to C++.",
+  "<br>",
+  "Project Objective:",
+  "The primary goal of this project is to enable the use of the algorithm in C++ for better performance and integration with other C++ projects.",
+  "<br>",
+  "GitHub: <a href='https://github.com/RitterAntoine/fdm_aa_cpp' target='_blank'>AnisotropicAppearanceFabrication</a>",
+  "<br>",
+  "--------------------------------------------------------------------------------------------------------------------------------------------",
+  "<br>",
+  "<b>Handwritten Digit Recognition with CNNs</b>",
+  "<br>",
+  "This project demonstrates how to build and train a Convolutional Neural Network (CNN) model to recognize handwritten digits using the MNIST dataset.",
+  "It features both the training of a CNN model and an interactive graphical user interface (GUI) for real-time digit recognition.",
+  "<br>",
+  "GitHub: <a href='https://github.com/RitterAntoine/Handwritten_Digit_Recognition' target='_blank'>HandwrittenDigitRecognition</a>",
+  "<br>",
+  "--------------------------------------------------------------------------------------------------------------------------------------------",
+  "<br>",
+  "<b>Simple Interactive Web Terminal</b>",
+  "<br>",
+  "This project is the website you're currently exploring!",
+  "It's a simple interactive web terminal that allows users to interact with a command-line interface (CLI) in a web browser.",
+  "<br>",
+  "GitHub: <a href='https://github.com/RitterAntoine/ritterantoine.github.io' target='_blank'>SimpleInteractiveWebTerminal</a>",
+  "<br>",
 ];
 
 help = [
