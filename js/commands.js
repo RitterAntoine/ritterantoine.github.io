@@ -29,6 +29,7 @@ projects = [
   "<br>",
   "This project simulates the motion of celestial bodies in our solar system using a simple physics engine.",
   "The simulation is visualized with a graphical interface, allowing users to observe the orbits of planets around the Sun.",
+  "<br>",
   "GitHub: <a href='https://github.com/RitterAntoine/SolarSystemSimulation' target='_blank'>SolarSystemSimulation</a>",
   "<br>",
   "--------------------------------------------------------------------------------------------------------------------------------------------",
